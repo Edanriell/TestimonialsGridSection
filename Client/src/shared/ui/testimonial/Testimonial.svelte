@@ -1,3 +1,3 @@
-<section>
-    <h2 class="bg-amber-400">Testimonials</h2>
-</section>
+<article>
+    <h2></h2>
+</article>

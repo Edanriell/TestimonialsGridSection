@@ -1,0 +1,39 @@
+.font-variable(@name, @file, @weight: 100 900, @style: normal) {
+	@font-face {
+		font-family: @name;
+		src: url("/fonts/@{file}.ttf") format("truetype");
+		font-weight: @weight;
+		font-style: @style;
+		font-display: swap;
+	}
+}
+
+.font-regular(@name, @file, @weight: normal, @style: normal) {
+	@font-face {
+		font-family: @name;
+		src: url("/fonts/@{file}.ttf") format("truetype");
+		font-weight: @weight;
+		font-style: @style;
+		font-display: swap;
+	}
+}
+
+.font-regular("Barlow", "Barlow-Thin", 100);
+.font-regular("Barlow", "Barlow-ExtraLight", 200);
+.font-regular("Barlow", "Barlow-Light", 300);
+.font-regular("Barlow", "Barlow-Regular", 400);
+.font-regular("Barlow", "Barlow-Medium", 500);
+.font-regular("Barlow", "Barlow-SemiBold", 600);
+.font-regular("Barlow", "Barlow-Bold", 700);
+.font-regular("Barlow", "Barlow-ExtraBold", 800);
+.font-regular("Barlow", "Barlow-Black", 900);
+
+.font-regular("Barlow", "Barlow-ThinItalic", 100, italic);
+.font-regular("Barlow", "Barlow-ExtraLightItalic", 200, italic);
+.font-regular("Barlow", "Barlow-LightItalic", 300, italic);
+.font-regular("Barlow", "Barlow-Italic", 400, italic);
+.font-regular("Barlow", "Barlow-MediumItalic", 500, italic);
+.font-regular("Barlow", "Barlow-SemiBoldItalic", 600, italic);
+.font-regular("Barlow", "Barlow-BoldItalic", 700, italic);
+.font-regular("Barlow", "Barlow-ExtraBoldItalic", 800, italic);
+.font-regular("Barlow", "Barlow-BlackItalic", 900, italic);
