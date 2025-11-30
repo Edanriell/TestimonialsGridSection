@@ -3,6 +3,6 @@
 </script>
 
 <section>
-    <h1 class="bg-blue-600">Home Page</h1>
+    <h1 class="sr-only">Testimonials grid section</h1>
     <Testimonial/>
 </section>
