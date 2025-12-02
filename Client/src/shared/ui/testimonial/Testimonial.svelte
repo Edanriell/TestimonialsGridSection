@@ -9,6 +9,9 @@
         bgColor: string;
         titleColor: string;
         textColor: string;
+        imageBorderColor: string;
+        authorTextColor: string;
+        authorOccupationTextColor: string;
         quoteSvg?: boolean;
     }
 
@@ -22,14 +25,25 @@
         bgColor,
         titleColor,
         textColor,
+        imageBorderColor,
+        authorTextColor,
+        authorOccupationTextColor,
         quoteSvg = false
     }: Props = $props();
 </script>
 
 <article
-        class="relative rounded-[0.5rem] p-[2rem] bg-[var(--color-purple-500)] shadow-[40px_60px_50px_-47px_rgba(72,85,106,0.25)]">
+        style="
+            --bg-color: {bgColor};
+            --title-color: {titleColor};
+            --text-color: {textColor};
+            --img-border-color: {imageBorderColor};
+            --author-text-color: {authorTextColor};
+            --author-occupation-text-color: {authorOccupationTextColor};
+        "
+        class="relative rounded-[0.5rem] p-[2rem] bg-[var(--bg-color)] shadow-[40px_60px_50px_-47px_rgba(72,85,106,0.25)]">
     {#if quoteSvg}
-        <svg class="hidden tablet:block absolute top-0 tablet:right-[10.438rem] desktop:right-[3.75rem] w-[6.5rem] h-[6.375rem]"
+        <svg class="hidden z-0 absolute top-0 w-[6.5rem] h-[6.375rem] tablet:block tablet:right-[10.438rem] desktop:right-[3.75rem]"
              fill="none" height="102"
              viewBox="0 0 104 102"
              width="104"
@@ -40,21 +54,21 @@
                   fill-rule="evenodd"/>
         </svg>
     {/if}
-    <figure>
+    <figure class="relative z-10">
         <figcaption class="relative">
             <div class="flex flex-row items-center gap-x-[1.063rem]">
                 <enhanced:img alt="{authorImageAlt}"
-                              class="rounded-full w-[1.75rem] h-[1.75rem] stroke-[var(--color-purple-300)] stroke-[0.125rem]"
+                              class="rounded-full relative block w-[1.75rem] h-[1.75rem] border-[red] border-[var(--img-border-color)] border-[0.125rem]"
                               src="{authorImageSrc}"/>
                 <div class="flex flex-col gap-y-[0.25rem]">
-                    <cite class="font-[var(--font-family)] font-medium text-[0.813rem] leading-[110%] text-[var(--color-white)]">{authorFullName}</cite>
-                    <small class="font-[var(--font-family)] font-medium text-[0.688rem] leading-[110%] text-[var(--color-purple-50)]">{authorOccupation}</small>
+                    <cite class="font-[var(--font-family)] font-medium text-[0.813rem] leading-[110%] text-[var(--author-text-color)] not-italic">{authorFullName}</cite>
+                    <small class="font-[var(--font-family)] font-medium text-[0.688rem] leading-[110%] text-[var(--author-occupation-text-color)]">{authorOccupation}</small>
                 </div>
             </div>
         </figcaption>
-        <h2 class="mt-[1rem] font-[var(--font-family)] font-semibold text-[1.25rem] leading-[120%] text-[var(--color-white)]">{title}</h2>
+        <h2 class="mt-[1rem] font-[var(--font-family)] font-semibold text-[1.25rem] leading-[120%] text-[var(--title-color)]">{title}</h2>
         <blockquote
-                class="mt-[1rem] font-[var(--font-family)] font-medium text-[0.813rem] leading-[140%] text-[var(--color-purple-50)]">
+                class="mt-[1rem] font-[var(--font-family)] font-medium text-[0.813rem] leading-[140%] text-[var(--text-color)]">
             “ {quote} ”
         </blockquote>
     </figure>

@@ -12,6 +12,9 @@
             bgColor: "var(--color-purple-500)",
             titleColor: "var(--color-white)",
             textColor: "var(--color-purple-50)",
+            imageBorderColor: "var(--color-purple-300)",
+            authorTextColor: "var(--color-white)",
+            authorOccupationTextColor: "var(--color-purple-50)",
             quoteSvg: true,
         },
         {
@@ -24,6 +27,9 @@
             bgColor: "var(--color-grey-500)",
             titleColor: "var(--color-white)",
             textColor: "var(--color-grey-100)",
+            imageBorderColor: "var(--color-grey-500)",
+            authorTextColor: "var(--color-white)",
+            authorOccupationTextColor: "var(--color-grey-100)",
         },
         {
             authorImageSrc: "images/raster/authors/Jeanette_Harmon.jpg",
@@ -35,6 +41,9 @@
             bgColor: "var(--color-white)",
             titleColor: "var(--color-grey-500)",
             textColor: "var(--color-grey-400)",
+            imageBorderColor: "var(--color-white)",
+            authorTextColor: "var(--color-grey-500)",
+            authorOccupationTextColor: "var(--color-grey-400)",
         },
         {
             authorImageSrc: "images/raster/authors/Kira_Whittle.jpg",
@@ -46,6 +55,9 @@
             bgColor: "var(--color-white)",
             titleColor: "var(--color-grey-500)",
             textColor: "var(--color-grey-400)",
+            imageBorderColor: "var(--color-white)",
+            authorTextColor: "var(--color-grey-500)",
+            authorOccupationTextColor: "var(--color-grey-400)",
         },
         {
             authorImageSrc: "images/raster/authors/Patrick_Abrams.jpg",
@@ -57,6 +69,9 @@
             bgColor: "var(--color-dark-blue)",
             titleColor: "var(--color-grey-200)",
             textColor: "var(--color-grey-100)",
+            imageBorderColor: "var(--color-purple-500)",
+            authorTextColor: "var(--color-white)",
+            authorOccupationTextColor: "var(--color-white)",
         },
     ];
 
@@ -103,13 +118,17 @@
             bgColor,
             titleColor,
             textColor,
+            imageBorderColor,
+            authorTextColor,
+            authorOccupationTextColor,
             quoteSvg
         }, index (index)}
             <li class={`relative ${testimonialsLayout[index].mobile} ${testimonialsLayout[index].tablet} ${testimonialsLayout[index].desktop}`}>
                 <Testimonial authorImageSrc={authorImageSrc} authorImageAlt={authorImageAlt}
                              authorFullName={authorFullName} authorOccupation={authorOccupation} title={title}
                              quote={quote} bgColor={bgColor} titleColor={titleColor} textColor={textColor}
-                             quoteSvg={quoteSvg}/>
+                             quoteSvg={quoteSvg} imageBorderColor={imageBorderColor} authorTextColor={authorTextColor}
+                             authorOccupationTextColor={authorOccupationTextColor}/>
             </li>
         {/each}
     </ul>
