@@ -41,7 +41,7 @@
             --author-text-color: {authorTextColor};
             --author-occupation-text-color: {authorOccupationTextColor};
         "
-        class="relative rounded-[0.5rem] p-[2rem] bg-[var(--bg-color)] shadow-[40px_60px_50px_-47px_rgba(72,85,106,0.25)]">
+        class="relative w-full h-full rounded-[0.5rem] p-[2rem] bg-[var(--bg-color)] shadow-[40px_60px_50px_-47px_rgba(72,85,106,0.25)]">
     {#if quoteSvg}
         <svg class="hidden z-0 absolute top-0 w-[6.5rem] h-[6.375rem] tablet:block tablet:right-[10.438rem] desktop:right-[3.75rem]"
              fill="none" height="102"
@@ -61,14 +61,14 @@
                               class="rounded-full relative block w-[1.75rem] h-[1.75rem] border-[red] border-[var(--img-border-color)] border-[0.125rem]"
                               src="{authorImageSrc}"/>
                 <div class="flex flex-col gap-y-[0.25rem]">
-                    <cite class="font-[var(--font-family)] font-medium text-[0.813rem] leading-[110%] text-[var(--author-text-color)] not-italic">{authorFullName}</cite>
-                    <small class="font-[var(--font-family)] font-medium text-[0.688rem] leading-[110%] text-[var(--author-occupation-text-color)]">{authorOccupation}</small>
+                    <cite class="font-[Barlow] font-medium text-[0.813rem] leading-[110%] text-[var(--author-text-color)] not-italic">{authorFullName}</cite>
+                    <small class="font-[Barlow] font-medium text-[0.688rem] leading-[110%] text-[var(--author-occupation-text-color)]">{authorOccupation}</small>
                 </div>
             </div>
         </figcaption>
-        <h2 class="mt-[1rem] font-[var(--font-family)] font-semibold text-[1.25rem] leading-[120%] text-[var(--title-color)]">{title}</h2>
+        <h2 class="mt-[1rem] font-[Barlow] font-semibold! text-[1.25rem] leading-[120%] text-[var(--title-color)] text-pretty">{title}</h2>
         <blockquote
-                class="mt-[1rem] font-[var(--font-family)] font-medium text-[0.813rem] leading-[140%] text-[var(--text-color)]">
+                class="mt-[1rem] font-[Barlow] font-medium! text-[0.813rem] leading-[140%] text-[var(--text-color)] text-pretty">
             “ {quote} ”
         </blockquote>
     </figure>

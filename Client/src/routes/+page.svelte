@@ -3,8 +3,8 @@
 </script>
 
 <svelte:head>
-    <title>Home</title>
-    <meta content="Svelte demo app" name="description"/>
+    <title>Testimonials</title>
+    <meta content="Testimonials grid section" name="description"/>
 </svelte:head>
 
 <HomeView/>

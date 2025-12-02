@@ -105,7 +105,8 @@
     ];
 </script>
 
-<section class="relative">
+<section
+        class="relative py-[4.563rem] px-[2.188rem] tablet:pt-[5.188rem] tablet:pb-[7.063rem] tablet:pl-[3.75rem] tablet:pr-[3.813rem] desktop:pt-[14.313rem] desktop:pb-[13.625rem] desktop:pl-[10.313rem] desktop:pr-[10.063rem]">
     <h1 class="sr-only">Testimonials grid section</h1>
     <ul class="grid grid-cols-1 gap-y-[2rem] tablet:grid-cols-2 tablet:gap-[2rem] desktop:grid-cols-4 desktop:grid-rows-2 desktop:gap-y-[2rem] desktop:gap-x-[1.5rem]">
         {#each testimonials as {
