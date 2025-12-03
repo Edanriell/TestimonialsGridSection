@@ -1,10 +1,11 @@
 <script lang="ts">
     import {ErrorView} from "@views/error";
+    import {page} from "$app/state";
 </script>
 
 <svelte:head>
-    <title>Page Not Found</title>
+    <title>Error</title>
     <meta content="Testimonials grid section" name="description"/>
 </svelte:head>
 
-<ErrorView/>
+<ErrorView error={page.error} status={page.status}/>

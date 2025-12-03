@@ -2,7 +2,7 @@
     import {goto} from "$app/navigation";
 
     const {error, status} = $props<{
-        error: App.Error;
+        error: App.Error | null;
         status: number;
     }>();
 </script>
